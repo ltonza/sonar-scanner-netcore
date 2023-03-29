@@ -7,8 +7,11 @@ image:
 push:
 	@echo "pushing images"
 	docker tag sonar-scanner-netcore ltonza/sonar-scanner-netcore:7.0.201-bullseye-slim-amd64
+	docker push ltonza/sonar-scanner-netcore:7.0.201-bullseye-slim-amd64
+	docker image rm ltonza/sonar-scanner-netcore:7.0.201-bullseye-slim-amd64
 	docker tag sonar-scanner-netcore ltonza/sonar-scanner-netcore:latest
-	docker push -a ltonza/sonar-scanner-netcore
+	docker push ltonza/sonar-scanner-netcore:latest
+	docker image rm ltonza/sonar-scanner-netcore:latest
 
 clean:
 	@echo "cleaning images"

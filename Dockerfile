@@ -1,7 +1,5 @@
 FROM mcr.microsoft.com/dotnet/sdk:7.0.201-bullseye-slim-amd64
 
-LABEL maintainer="Agência Estado"
-
 WORKDIR /usr/local/src
 
 RUN apt-get update && apt-get dist-upgrade -y
